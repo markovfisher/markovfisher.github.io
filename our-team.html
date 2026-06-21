@@ -10,13 +10,21 @@
 
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Markov-Fisher<span> Systems Advisory</span></a>
+            <a href="index.html" class="logo">Markov-Fisher<span> Advisory Partners </span></a>
+
+            <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Options">≡</button>
+
             <nav>
                 <a href="index.html">Overview</a>
                 <a href="about.html">Our Story</a>
-                <a href="services.html">Services Portfolio</a>
-                <a href="our-team.html" class="active-link">Technical Partners</a>
-                <a href="about.html#contact" class="btn-nav">Contact Us</a>
+                
+                <a href="services.html">Services</a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="services.html#advisory">AI Advisory</a>
+                        <a href="services.html#consulting projects">Technical Solutions</a>
+                    </div> -->
+                <a href="our-team.html">Our Partners</a>
+                <a href="#contact" class="btn-nav">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -25,7 +33,7 @@
         <div class="container">
             <span class="hero-tag">The Builder Advantage</span>
             <h1>The Core Engineering Architecture Partners</h1>
-            <p>We are specialized, master's-educated computer scientists and technical researchers who design and write your codebases from first principles math.</p>
+            <p>We are specialized, master's-educated AI researchers and Quantitative analysts who design and implement your AI solutions from first principles math</p>
         </div>
     </section>
 
@@ -36,12 +44,14 @@
             <div class="team-card">
                 <div class="team-image-wrapper">
                     <!-- Drop your photo here: e.g., <img src="assets/joe.jpg" alt="Joe, Co-Founder"> -->
-                    <span>[ Photo Link: assets/joe.jpg ]</span>
+                    <!-- <span>[ Photo Link: assets/joe.jpg ]</span> -->
+                    <img src="assets/joe.jpeg" alt="Co-Founder">
                 </div>
+
                 <div class="team-info-pane">
                     <div>
-                        <span style="color:var(--gold); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:4px;">Co-Founder & Core Engineering Partner</span>
-                        <h3 style="font-size:24px; margin-bottom:15px; font-family:var(--font-heading);">Joe, M.S.</h3>
+                        <span style="color:var(--gold); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:4px;">Partner & AI, LLM Specialist</span>
+                        <h3 style="font-size:24px; margin-bottom:15px; font-family:var(--font-heading);">Johanan Pranesh, M.S.</h3>
                         <p style="color:var(--text-muted); font-size:14px; line-height:1.6; margin-bottom:20px;">Holding an advanced Master's degree focused on intensive quantitative analysis, machine learning research, and deployment frameworks. A first-principles developer specializing in converting deep mathematical theory into stable, high-performance production scripts.</p>
                     </div>
                     <div style="border-top:1px solid var(--border); padding-top:15px; font-size:12px; color:var(--text-muted); line-height: 1.8;">
@@ -58,20 +68,21 @@
             <div class="team-card">
                 <div class="team-image-wrapper">
                     <!-- Drop your partner's photo here: e.g., <img src="assets/partner.jpg" alt="Co-Founder"> -->
-                    <span>[ Photo Link: assets/partner.jpg ]</span>
+                    <!-- <img src="assets/partner.jpg" alt="Co-Founder"> -->
+                    <img src="assets/partner.jpg" alt="Co-Founder">
                 </div>
                 <div class="team-info-pane">
                     <div>
-                        <span style="color:var(--gold); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:4px;">Co-Founder & Systems Director</span>
-                        <h3 style="font-size:24px; margin-bottom:15px; font-family:var(--font-heading);">Managing Advisory Partner, M.S.</h3>
-                        <p style="color:var(--text-muted); font-size:14px; line-height:1.6; margin-bottom:20px;">Holding an advanced quantitative field Master's degree specializing in algorithmic structures, multi-variable project systems, and data-layer risk analysis. Built on extensive project research pipelines designed to link complex mathematical outputs directly with stable enterprise operations.</p>
+                        <span style="color:var(--gold); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:4px;">Managing Partner & ML, DL Specialist</span>
+                        <h3 style="font-size:24px; margin-bottom:15px; font-family:var(--font-heading);">Gregory Colonescu, M.S.</h3>
+                        <p style="color:var(--text-muted); font-size:14px; line-height:1.6; margin-bottom:20px;">Holding an advanced Master's degree specializing in algorithmic structures, multi-variable project systems, and data-layer risk analysis. Built on extensive project research pipelines designed to link complex mathematical outputs directly with stable enterprise operations.</p>
                     </div>
                     <div style="border-top:1px solid var(--border); padding-top:15px; font-size:12px; color:var(--text-muted); line-height: 1.8;">
                         <strong>Verified Technical Track Record:</strong><br>
-                        • <strong>Python Systems Engineering:</strong> 7 Years Experience<br>
+                        • <strong>Python Systems Engineering:</strong> 9 Years Experience<br>
                         • <strong>Predictive Machine Learning:</strong> 5 Years Experience<br>
                         • <strong>Deep Learning (DL) Architecture:</strong> 4 Years Experience<br>
-                        • <strong>Artificial Intelligence Models:</strong> 3 Years Experience
+                        • <strong>Artificial Intelligence Models:</strong> 2 Years Experience
                     </div>
                 </div>
             </div>
@@ -87,6 +98,12 @@
             </div>
         </div>
     </footer>
-
+    <!-- MOBILE NAVIGATION MENU CONTROLLER INTERFACE -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNavbar').classList.toggle('mobile-active');
+        });
+    </script>
+    
 </body>
 </html>
