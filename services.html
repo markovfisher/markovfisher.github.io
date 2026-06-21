@@ -10,13 +10,21 @@
 
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Markov-Fisher<span> Systems Advisory</span></a>
+            <a href="index.html" class="logo">Markov-Fisher<span> Advisory Partners </span></a>
+
+            <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Options">≡</button>
+
             <nav>
                 <a href="index.html">Overview</a>
                 <a href="about.html">Our Story</a>
-                <a href="services.html" class="active-link">Services Portfolio</a>
-                <a href="our-team.html">Technical Partners</a>
-                <a href="about.html#contact" class="btn-nav">Contact Us</a>
+                
+                <a href="services.html">Services</a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="services.html#advisory">AI Advisory</a>
+                        <a href="services.html#consulting projects">Technical Solutions</a>
+                    </div> -->
+                <a href="our-team.html">Our Partners</a>
+                <a href="#contact" class="btn-nav">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -77,6 +85,12 @@
             </div>
         </div>
     </footer>
+    <!-- MOBILE NAVIGATION MENU CONTROLLER INTERFACE -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNavbar').classList.toggle('mobile-active');
+        });
+    </script>
 
 </body>
 </html>
