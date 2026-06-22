@@ -90,6 +90,11 @@ footer a:hover { color: #ffffff; }
 @media (max-width: 992px) {
     .grid-2 { grid-template-columns: 1fr; gap: 40px; }
     .grid-3 { grid-template-columns: 1fr; gap: 24px; }
+    /* New rule to flip the stack order on mobile only */
+    .mobile-reverse {
+        display: flex !important;
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 768px) {
