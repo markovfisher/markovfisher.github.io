@@ -93,16 +93,15 @@ footer a:hover { color: #ffffff; }
 }
 
 @media (max-width: 768px) {
-    /* 1. Prevent the logo from pushing the button off-screen */
     .logo { 
         font-size: 13px; 
-        white-space: normal; /* Allows text to wrap if screen is very narrow */
+        white-space: normal; 
         line-height: 1.2; 
-        max-width: 75%; /* Reserves space for the hamburger button */
+        max-width: 75%; 
     }
     
     .logo span { 
-        display: block; /* Moves "Advisory Partners" to a new line on mobile */
+        display: block; 
         font-size: 10px; 
         margin-top: 2px;
     }
@@ -110,39 +109,41 @@ footer a:hover { color: #ffffff; }
     .nav-container {
         padding: 0 20px;
         width: 100%;
-        overflow: hidden; /* Hard stop for horizontal scrolling */
     }
 
     .menu-toggle { 
         display: block; 
-        padding-right: 0; /* Ensures button stays flush to the right */
+        padding-right: 0;
+        position: relative;
+        z-index: 120; /* Ensures the button is ALWAYS above layout content layers */
     }
     
-    /* 2. Fix the Mobile Menu Alignment */
-    nav {
-        display: none;
+    /* TARGET WITH ID FOR IRREFUTABLE BROWSER SPECIFICITY */
+    #mainNavbar {
+        display: none !important; /* Force hidden by default on mobile */
         flex-direction: column;
         position: absolute;
         top: 80px;
         left: 0;
-        width: 100%; /* Full width to prevent alignment gaps */
+        width: 100%; 
         background-color: var(--bg-canvas);
         border-bottom: 1px solid var(--border);
-        padding: 30px 40px; /* Increased padding */
+        padding: 30px 40px; 
         gap: 20px;
-        /* Changed from flex-start to flex-end to move options to the right */
         align-items: flex-end; 
         text-align: right;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 20px rgba(30,34,41,0.05);
+        z-index: 110; /* Ensures menu rolls down ABOVE hero sections */
     }
     
-    nav.mobile-active { 
-        display: flex; 
+    /* Force display when active toggled */
+    #mainNavbar.mobile-active { 
+        display: flex !important; 
     }
 
-    nav a { 
+    #mainNavbar a { 
         font-size: 14px; 
-        width: auto; /* Links only take up as much space as needed */
+        width: auto; 
         padding: 5px 0;
     }
 
@@ -150,7 +151,7 @@ footer a:hover { color: #ffffff; }
         display: inline-block; 
         margin-top: 10px;
         text-align: center;
-        width: 140px; /* Gives the button a consistent size on mobile */
+        width: 140px; 
     }
     
     .dropdown { width: 100%; text-align: right; }
