@@ -93,31 +93,67 @@ footer a:hover { color: #ffffff; }
 }
 
 @media (max-width: 768px) {
-    .menu-toggle { display: block; }
+    /* 1. Prevent the logo from pushing the button off-screen */
+    .logo { 
+        font-size: 13px; 
+        white-space: normal; /* Allows text to wrap if screen is very narrow */
+        line-height: 1.2; 
+        max-width: 75%; /* Reserves space for the hamburger button */
+    }
     
-    /* Transforming horizontal nav into sliding structural side drawer */
+    .logo span { 
+        display: block; /* Moves "Advisory Partners" to a new line on mobile */
+        font-size: 10px; 
+        margin-top: 2px;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+        width: 100%;
+        overflow: hidden; /* Hard stop for horizontal scrolling */
+    }
+
+    .menu-toggle { 
+        display: block; 
+        padding-right: 0; /* Ensures button stays flush to the right */
+    }
+    
+    /* 2. Fix the Mobile Menu Alignment */
     nav {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 80px;
-        left: -24px;
-        width: calc(100% + 48px);
+        left: 0;
+        width: 100%; /* Full width to prevent alignment gaps */
         background-color: var(--bg-canvas);
         border-bottom: 1px solid var(--border);
-        padding: 24px;
+        padding: 30px 40px; /* Increased padding */
         gap: 20px;
-        align-items: flex-start;
+        /* Changed from flex-start to flex-end to move options to the right */
+        align-items: flex-end; 
+        text-align: right;
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     }
     
-    nav.mobile-active { display: flex; }
-    nav a { font-size: 13px; width: 100%; display: block; }
-    .btn-nav { display: inline-block; width: auto; text-align: left; }
+    nav.mobile-active { 
+        display: flex; 
+    }
+
+    nav a { 
+        font-size: 14px; 
+        width: auto; /* Links only take up as much space as needed */
+        padding: 5px 0;
+    }
+
+    .btn-nav { 
+        display: inline-block; 
+        margin-top: 10px;
+        text-align: center;
+        width: 140px; /* Gives the button a consistent size on mobile */
+    }
     
-    .dropdown { width: 100%; }
-    .dropdown-menu { position: static; box-shadow: none; border: none; padding: 4px 0 0 12px; margin-top: 10px; background: transparent; }
-    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown { width: 100%; text-align: right; }
 }
 
 /* ==========================================================================
