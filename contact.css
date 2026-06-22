@@ -195,12 +195,22 @@ footer a:hover { color: #ffffff; }
         transform: scale(1);
     }
 }
-
 /* Keyframes: Smoothly dissolving the overlay to reveal the index page */
 @keyframes fadeOutOverlay {
-    to {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9999;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
+        z-index: 9999;
+    }
+    100% {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        z-index: -1; /* FIX: Pushes the layer behind everything so buttons are clickable */
     }
 }
